@@ -7,7 +7,7 @@ public class Control : MonoBehaviour
     public bool LeftMove = false;
     public bool RightMove = false;
     Vector3 moveVelocity = Vector3.zero;
-    float moveSpeed = 10;
+    float moveSpeed = 50;
 
     void Update()
     {
