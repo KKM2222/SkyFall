@@ -10,10 +10,17 @@ public class Char : MonoBehaviour
     Rigidbody2D rigid;
     SpriteRenderer spriter;
 
-    void Start()
+   /* public Sprite[] spriteCon; */
+
+    void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
         spriter = GetComponent<SpriteRenderer>();   
+    }
+
+    public void OnEnable()
+    {
+        /*spriter.sprite = spriteCon[GameManager.instance.playerId];*/
     }
 
     void Update()

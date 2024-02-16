@@ -18,7 +18,6 @@ public class HUD : MonoBehaviour
 
     void LateUpdate()
     {
-        //시간이 안보임
         switch(type)
         {
             case InfoType.Time:

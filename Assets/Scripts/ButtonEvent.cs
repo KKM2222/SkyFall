@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class ButtonEvent : MonoBehaviour
@@ -21,7 +22,6 @@ public class ButtonEvent : MonoBehaviour
     public void LeftBtnDown()
     {
         control.LeftMove = true;
-        Debug.Log("LeftMove");
     }
     public void LeftBtnUp()
     {
@@ -30,7 +30,6 @@ public class ButtonEvent : MonoBehaviour
     public void RightBtnDown()
     {
         control.RightMove = true;
-        Debug.Log("RightMove");
     }
     public void RightBtnUp()
     {
