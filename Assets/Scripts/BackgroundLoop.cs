@@ -4,7 +4,12 @@ using UnityEngine;
 
 public class BackgroundLoop : MonoBehaviour
 {
+    public float lenghtParam = 2f;
     private float length;
+
+    public float obspeed = 10f;
+
+    public GameObject lengthTopObject;
 
     private void Awake()
     {
@@ -15,14 +20,17 @@ public class BackgroundLoop : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(transform.position.y <= -length) 
+        transform.Translate(Vector3.up * obspeed * Time.deltaTime);
+
+        if (transform.position.y > lengthTopObject.transform.position.y)
         {
             Reposition();
         }
     }
     private void Reposition()
     {
-        Vector2 offset = new Vector2(length * 2f, 0);
-        transform.position = (Vector2) transform.position + offset;
+        //Debug.Log("Reposition");
+        // Vector2 offset = new Vector2(transform.position.x, length * lenghtParam);
+        transform.position = Vector2.zero;
     }
 }
